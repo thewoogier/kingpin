@@ -64,6 +64,26 @@ def test_document_example_game(game):
         [30, 60, 90, 120, 150, 180, 210, 240, 270, 299]
     ),
     (
+        "The Rarest Score (292)",
+        # 11 Strikes followed by a 2-pin count
+        [["X"]] * 9 + [["X", "X", "2"]],
+        [30, 60, 90, 120, 150, 180, 210, 240, 270, 292]
+    ),
+    (
+        "Lowest Clean Game (100)",
+        # Alternating Gutter/Spare, with a Gutter bonus.
+        # Every frame is 10 (spare) + 0 (next roll) = 10 points.
+        [["0", "/"]] * 9 + [["0", "/", "0"]],
+        [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    ),
+    (
+        "All 9s aka No-Tap Perfect Game (190))",
+        # 9, / every frame. Bonus is 9.
+        # Every frame is 10 + 9 = 19 points.
+        [["9", "/"]] * 9 + [["9", "/", "9"]],
+        [19, 38, 57, 76, 95, 114, 133, 152, 171, 190]
+    ),
+    (
         "Empty Game (New Game State)",
         [],
         [None] * 10
