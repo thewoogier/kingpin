@@ -56,9 +56,6 @@ class BowlingGame:
 
     def _parse_frames_to_rolls(self, frames: list[Frame]) -> list[int]:
         """
-        Converts string frames into integers.
-        """
-        """
         Converts the list of string frames into a flat list of integer pinfalls.
 
         This method also performs strict validation on a frame-by-frame basis,
